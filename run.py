@@ -122,29 +122,12 @@ def main():
             if ch == "cc":
                 print("Enter credentials details")
                 print('-'*20)
-                print("App name (already created or new one).....")
+                print("App name .....")
                 app_name =input()
-                print("App username (already created or new one)....")
+                print("App username ....")
                 username = input()
                 print("App password ....")
-                # print("Do you want to input your own password or have one generated for you?")
-                # print("Use gp ----- to generate password.")
-                # print("Use co ----- to choose your own password ")
-                # print("write ex ---- to exit")
-                # p_choice = input()
-                # if p_choice == "co":
-                #     print("Enter password ....")
                 password = input()
-                # elif p_choice == "gp":
-                #     print("Enter the length of the password you want to generate e.g:5")
-                #     size=int(input())
-                #     password = passGen(size)
-                #     print(f"Your generated password id {password}")
-                # elif p_choice == 'ex':
-                #     print("Byeeeee........")
-                #     break
-                # else:
-                #     print("Sorry I didn\'t get that. Please try again!")
                 save_credentials(create_credential(app_name,username, password))
                 print('\n')
                 print("Credential created:")
