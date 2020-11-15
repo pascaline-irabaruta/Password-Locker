@@ -43,3 +43,8 @@ def check_existing_credentials(app_name):
     functions that checks if a credential exist
     '''
     return Credentials.find_by_app_name(app_name)
+def find_credential(app_name):
+    '''
+    Function that finds a contact by username and return the credential
+    '''
+    return Credentials.find_by_app_name(app_name)
