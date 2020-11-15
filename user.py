@@ -11,3 +11,8 @@ class User():
         self.l_name = l_name
         self.u_name = u_name
         self.psswd = psswd
+    def save_user(self):
+        '''
+        a function that saves user
+        '''
+        User.user_list.append(self)
