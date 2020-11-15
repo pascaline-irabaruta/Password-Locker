@@ -12,3 +12,8 @@ def create_user(f_name,l_name,u_name,psswd):
     '''
     new_user = User(f_name, l_name,u_name, psswd)
     return new_user
+def save_user(User):
+    '''
+    function to save user
+    '''
+    User.save_user()
