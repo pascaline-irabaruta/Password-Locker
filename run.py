@@ -78,4 +78,15 @@ def main():
     psswd = getpass.getpass()
     print("Confirm password .....")
     c_psswd = getpass.getpass()
-    
+    if c_psswd == psswd :
+        print("ACCOUNT SUCCESSFULLY CREATED!")
+        save_user(create_user(f_name,l_name,u_name,psswd))
+    else:
+     #    A loop to test until confirm password is same as password inputed
+        while c_psswd != psswd:
+            print('\n')
+            print("please confirm your password!")
+            print("Confirm password .....")
+            c_psswd = getpass.getpass()
+        print("ACCOUNT SUCCESSFULLY CREATED!")
+        save_user(create_user(f_name,l_name,u_name,psswd))
