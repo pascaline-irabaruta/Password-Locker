@@ -36,11 +36,9 @@ class Credentials:
             '''
             if credential.app_name == app_name:
                 return credential
-        # for user in User.user_list:
-        #     '''
-        #     a for loop to loop through the list and check if the credential exists
-        #     '''
-        #     if user.app_name == app_name:
-        #         present_user = user.app_name
-        #         return present_user
-        # return "credential does not exist"
+    @classmethod
+    def display_credentials(cls):
+        '''
+        method that displays all the credentials in the credential_list
+        '''
+        return cls.credential_list
