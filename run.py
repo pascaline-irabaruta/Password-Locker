@@ -108,3 +108,14 @@ def main():
         account_exist = check_if_userExist(u_name, psswd)
     if account_exist == u_name:
         print(f"Dear {u_name}, You're successfully Logged in!")
+        while True:
+            print("_"*30)
+            print("Use the following short codes to interact with the app! ")
+            print("write cc ----- To create credentials")
+            print("write dc ----- To display created credentials")
+            print("write dele ----- To delete unneeded credentials")
+            print("write sec ----- To delete search credentials by app name")
+            print("write gp ----- To get password generated for a credential")
+            print("write ex ----- To exit")
+            print('\n')
+            ch = input()
