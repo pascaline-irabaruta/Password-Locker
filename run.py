@@ -53,7 +53,29 @@ def display_credentials():
     function that displays all the credentials
     '''
     return Credentials.display_credentials()
-    
+
 def passGen(size = 8, char=string.ascii_uppercase + string.ascii_lowercase + string.digits):
     gen = ''.join(random.choice(char) for _ in range(size))
     return gen
+
+def check_if_userExist(u_name, psswd):
+    return User.check_if_userExist(u_name, psswd)
+
+def main():
+    print("Hello, welcome to Password Locker. Please tell us your name")
+    user_name = input()
+    print('\n')
+    print(f"Hello {user_name},Please create your Password-Locker account:")
+    print("Your full information:")
+    print("-"*20)
+    print("Enter your first name .....")
+    f_name = input()
+    print("Enter your last name .....")
+    l_name = input()
+    print("Enter your prefered username .....")
+    u_name = input()
+    print("Enter Password .....")
+    psswd = getpass.getpass()
+    print("Confirm password .....")
+    c_psswd = getpass.getpass()
+    
