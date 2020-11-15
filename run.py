@@ -53,3 +53,7 @@ def display_credentials():
     function that displays all the credentials
     '''
     return Credentials.display_credentials()
+    
+def passGen(size = 8, char=string.ascii_uppercase + string.ascii_lowercase + string.digits):
+    gen = ''.join(random.choice(char) for _ in range(size))
+    return gen
