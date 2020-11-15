@@ -19,6 +19,12 @@ def save_user(User):
     User.save_user()
 def del_user(User):
     '''
-    function to delete user
+    function to delete a specific user
     '''
     User.delete_user()
+def create_credential(app_name,username, password):
+    '''
+    function to create a new credential
+    '''
+    new_credential = Credentials(app_name,username,password)
+    return new_credential
