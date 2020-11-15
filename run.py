@@ -175,7 +175,7 @@ def main():
                     print('\n')
                     print("password and credential deleted")
                 else:
-                    print("App name does not exist")
+                    print(" App is not saved in the app")
             elif ch == "sec":
                 print("Enter the name of the credential(app name) you want to serch ...")
                 del_c = input()
@@ -188,7 +188,7 @@ def main():
                     print(f"App name ..... {cred.password}")
                     print('n')
                 else:
-                    print("That App does not exist")
+                    print("That App is not saved in the app")
             elif ch == 'ex':
                 print("Byeeeee........")
                 break
