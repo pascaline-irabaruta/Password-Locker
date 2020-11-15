@@ -48,3 +48,8 @@ def find_credential(app_name):
     Function that finds a contact by username and return the credential
     '''
     return Credentials.find_by_app_name(app_name)
+def display_credentials():
+    '''
+    function that displays all the credentials
+    '''
+    return Credentials.display_credentials()
