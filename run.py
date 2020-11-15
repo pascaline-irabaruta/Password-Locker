@@ -119,3 +119,99 @@ def main():
             print("write ex ----- To exit")
             print('\n')
             ch = input()
+            if ch == "cc":
+                print("Enter credentials details")
+                print('-'*20)
+                print("App name (already created or new one).....")
+                app_name =input()
+                print("App username (already created or new one)....")
+                username = input()
+                print("App password ....")
+                # print("Do you want to input your own password or have one generated for you?")
+                # print("Use gp ----- to generate password.")
+                # print("Use co ----- to choose your own password ")
+                # print("write ex ---- to exit")
+                # p_choice = input()
+                # if p_choice == "co":
+                #     print("Enter password ....")
+                password = input()
+                # elif p_choice == "gp":
+                #     print("Enter the length of the password you want to generate e.g:5")
+                #     size=int(input())
+                #     password = passGen(size)
+                #     print(f"Your generated password id {password}")
+                # elif p_choice == 'ex':
+                #     print("Byeeeee........")
+                #     break
+                # else:
+                #     print("Sorry I didn\'t get that. Please try again!")
+                save_credentials(create_credential(app_name,username, password))
+                print('\n')
+                print("Credential created:")
+                print(f"App name ..... {app_name}")
+                print(f"Username ..... {username}")
+                print(f"Password ..... {password}")
+            elif ch == "gp" :
+                print("Enter credentials details")
+                print('-'*20)
+                print("App name .....")
+                app_name =input()
+                print("App username ....")
+                username = input()
+                print("Enter the length of the password you want to generate e.g:5")
+                size=int(input())
+                password = passGen(size)
+                print(f"Your generated password is {password}")
+                save_credentials(create_credential(app_name,username, password))
+                print('\n')
+                print("Credential created:")
+                print(f"App name ..... {app_name}")
+                print(f"Username ..... {username}")
+                print(f"Password ..... {password}")
+            elif ch == "dc" :
+                if (display_credentials):
+                    print("List of your credentials")
+                    print("\n")
+                    for credential in display_credentials():
+                        print(f"App name ..... {credential.app_name}")
+                        print(f"Username ..... {credential.username}")
+                        print(f"Password ..... {credential.password}")
+                        print('\n')
+                else:
+                    print('\n')
+                    print("You do not have saved credentials yet")
+                    print('\n')
+            elif ch == "dele":
+                print("Enter the name of the credential(app name) you want to delete ...")
+                del_c = input()
+                if check_existing_credentials(del_c):
+                    cred = find_credential(del_c)
+                    delete_credential(cred)
+                    print('\n')
+                    print(f"{cred.app_name} deleted!")
+                    print('\n')
+                    print("password and credential deleted")
+                else:
+                    print("App name does not exist")
+            elif ch == "sec":
+                print("Enter the name of the credential(app name) you want to serch ...")
+                del_c = input()
+                if check_existing_credentials(del_c):
+                    cred = find_credential(del_c)
+                    # delete_credential(cred)
+                    print('\n')
+                    print(f"App name ..... {cred.app_name}")
+                    print(f"App name ..... {cred.username}")
+                    print(f"App name ..... {cred.password}")
+                    print('n')
+                else:
+                    print("That App does not exist")
+            elif ch == 'ex':
+                print("Byeeeee........")
+                break
+            else:
+                print("wrong choice ,please try again!")
+
+
+if __name__=='__main__':
+ main()
