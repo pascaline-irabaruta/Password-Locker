@@ -38,3 +38,8 @@ def delete_credential(Credentials):
     a function to delete credential
     '''
     Credentials.delete_credential()
+def check_existing_credentials(app_name):
+    '''
+    functions that checks if a credential exist
+    '''
+    return Credentials.find_by_app_name(app_name)
