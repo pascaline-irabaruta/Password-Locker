@@ -13,3 +13,9 @@ class Credentials:
         self.app_name = app_name
         self.username = username
         self.password = password
+    def save_credentials(self):
+        '''
+        function that saves a credential
+        it appends a new credential to the credential_list
+        '''
+        Credentials.credential_list.append(self)
