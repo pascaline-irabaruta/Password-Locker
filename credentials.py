@@ -19,3 +19,8 @@ class Credentials:
         it appends a new credential to the credential_list
         '''
         Credentials.credential_list.append(self)
+    def delete_credential(self):
+        '''
+        funtion that deletes a credential
+        '''
+        Credentials.credential_list.remove(self)
