@@ -16,3 +16,14 @@ class User():
         a function that saves user
         '''
         User.user_list.append(self)
+    def check_if_userExist(u_name,psswd):
+
+        '''
+        A function to check if the user with the entered credentials exist
+        '''
+
+        current_user = " "
+        for user in User.user_list:
+            if user.u_name == u_name and user.psswd == psswd:
+                current_user = user.u_name
+        return current_user
