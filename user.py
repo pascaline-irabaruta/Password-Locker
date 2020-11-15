@@ -1,4 +1,5 @@
 class User():
     '''
-    A class that promts user to signup and login to generate passwords
+    A class that prompts user to signup and login to generate passwords
     '''
+    user_list = []
